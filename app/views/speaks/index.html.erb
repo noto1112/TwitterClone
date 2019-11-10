@@ -2,14 +2,21 @@
 
 <p><%= notice %></p>
 
-<table>
-<% @speaks.each do |speak| %>
-<tr>
-  <td><%= speak.content %></td>
-  <td><%= link_to "編集する", edit_speak_path(speak.id), data: { confirm: '本当に編集していいですか？' } %></td>
-  <td><%= link_to '削除する', speak_path(speak.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
-</tr>
-<% end %>
+<table border="1" align="center">
+  <colgroup>
+    <col style="width:60%">
+    <col style="width:20%">
+    <col style="width:20%">
+  </colgroup>
+
+
+  <% @speaks.each do |speak| %>
+  <tr>
+    <td><%= speak.content %></td>
+    <td><%= link_to "編集する", edit_speak_path(speak.id), data: { confirm: '本当に編集していいですか？' } %></td>
+    <td><%= link_to '削除する', speak_path(speak.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></td>
+  </tr>
+  <% end %>
 </table>
 
 <%= link_to '【topに戻る】', root_path %>

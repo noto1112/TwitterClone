@@ -1,0 +1,27 @@
+header{
+  background-color: yellow;
+  height: 3rem;
+}
+
+body{
+  text-align: center;
+}
+
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer{
+  background-color: yellow;
+  height: 3rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+
+ul{
+ list-style: none;
+}
