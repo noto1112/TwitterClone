@@ -43,6 +43,8 @@ end
 
 
 def confirm
+  @speak = Speak.new(speak_params)
+  render :new if @speak.invalid?
 end
 
 private

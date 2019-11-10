@@ -1,9 +1,5 @@
 <h1>編集画面</h1>
 
-<%= form_with(model: @speak, local: true) do |form| %>
+<%= render 'form' %>
 
-  <%= form.text_area :content %><br>
-  <%= form.submit %>
-
-<% end %>
 <%= link_to '【一覧に戻る】', speaks_path %>

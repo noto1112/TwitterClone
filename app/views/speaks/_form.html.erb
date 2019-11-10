@@ -1,0 +1,15 @@
+<%= form_with(model: @speak, local: true, url: choose_new_or_edit) do |form| %>
+  <% if @speak.errors.any? %>
+  <h1><%= @speak.errors.count %>件のエラーがあります。</h1>
+  <ul>
+    <% @speak.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
+  <%= form.text_area :content, rows: 10, cols:50 %><br>
+  <%= form.submit %><br>
+
+<% end %>
+<%= link_to '【topに戻る】', root_path %>
