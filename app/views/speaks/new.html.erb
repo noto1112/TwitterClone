@@ -1,0 +1,9 @@
+<h1>新規投稿</h1>
+
+<%= form_with(model: @speak, local: true) do |form| %>
+
+  <%= form.text_area :content %><br>
+  <%= form.submit %>
+
+<% end %>
+<%= link_to '【topに戻る】', root_path %>
